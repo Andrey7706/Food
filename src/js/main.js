@@ -210,7 +210,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
     // Forms 
 
-    const form = document.querySelectorAll('form');
+    const forms = document.querySelectorAll('form');
     const message = {
         loading: 'Загрузка...',
         sucsess: 'Спасибо! Скоро мы с вами свяжемся',
@@ -228,7 +228,7 @@ window.addEventListener('DOMContentLoaded', function() {
             let statusMessage = document.createElement('div');
             statusMessage.classList.add('status');
             statusMessage.textContent = message.loading;
-            form.appendChild(statusMessage);
+            form.append(statusMessage);
 
             const request = new XMLHttpRequest();
             request.open('POST', 'server.php');
